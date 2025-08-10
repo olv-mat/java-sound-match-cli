@@ -1,6 +1,7 @@
 package com.github.olvmat.soundmatchcli.app;
 
 import com.github.olvmat.soundmatchcli.models.Music;
+import com.github.olvmat.soundmatchcli.models.Podcast;
 import com.github.olvmat.soundmatchcli.utils.console.ConsoleUtils;
 
 public class Main {
@@ -36,6 +37,20 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Podcasts");
+                    Podcast podcast = new Podcast(
+                            "Serial",
+                            60,
+                            12
+                    );
+                    podcast.like();
+                    ConsoleUtils.display(
+                            "Podcast: " + podcast.getTitle() + "\n" +
+                                    "Episode: " + podcast.getEpisode() + "\n" +
+                                    "Duration: " + podcast.getDuration() + " Minutes" + "\n" +
+                                    "Reproductions: " + podcast.getTotalReproductions() + "\n" +
+                                    "Likes: " + podcast.getLikes() + "\n"
+                            );
+                    podcast.play();
                     break;
                 case 3:
                     System.out.println("Leaving...");
