@@ -16,4 +16,9 @@ public class Podcast extends Audio {
     public int getEpisode() {
         return this.episode;
     }
+
+    @Override
+    public void play() {
+        System.out.println("Playing Podcast " + this.getTitle() + "...");
+    }
 }

@@ -16,4 +16,9 @@ public class Music extends Audio {
     public String getAlbum() {
         return this.album;
     }
+
+    @Override
+    public void play() {
+        System.out.println("Playing Music" + this.getTitle() + "...");;
+    }
 }

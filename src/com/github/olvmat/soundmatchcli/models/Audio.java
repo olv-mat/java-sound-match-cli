@@ -35,4 +35,8 @@ public abstract class Audio {
     public void like() {
         this.likes ++;
     }
+
+    public void play() {
+        System.out.println("Playing...");
+    }
 }
