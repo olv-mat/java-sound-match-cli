@@ -4,18 +4,16 @@ public abstract class Audio {
     private final String title;
     private final int duration;
     private final int totalReproductions;
-    private final int likes;
+    private int likes;
 
     public Audio(
             String title,
             int duration,
-            int totalReproductions,
-            int likes
+            int totalReproductions
     ) {
         this.title = title;
         this.duration = duration;
         this.totalReproductions = totalReproductions;
-        this.likes = likes;
     }
 
     public String getTitle() {
@@ -32,5 +30,9 @@ public abstract class Audio {
 
     public int getLikes() {
         return this.likes;
+    }
+
+    public void like() {
+        this.likes ++;
     }
 }

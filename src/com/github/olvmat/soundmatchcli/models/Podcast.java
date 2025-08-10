@@ -7,10 +7,9 @@ public class Podcast extends Audio {
             String title,
             int duration,
             int totalReproductions,
-            int likes,
             int episode
     ) {
-        super(title, duration, totalReproductions, likes);
+        super(title, duration, totalReproductions);
         this.episode = episode;
     }
 

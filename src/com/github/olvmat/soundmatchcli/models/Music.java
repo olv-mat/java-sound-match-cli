@@ -7,10 +7,9 @@ public class Music extends Audio {
             String title,
             int duration,
             int totalReproductions,
-            int likes,
             String album
     ) {
-        super(title, duration, totalReproductions, likes);
+        super(title, duration, totalReproductions);
         this.album = album;
     }
 
