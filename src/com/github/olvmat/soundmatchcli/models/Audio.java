@@ -3,17 +3,15 @@ package com.github.olvmat.soundmatchcli.models;
 public abstract class Audio {
     private final String title;
     private final int duration;
-    private final int totalReproductions;
+    protected int totalReproductions;
     private int likes;
 
     public Audio(
             String title,
-            int duration,
-            int totalReproductions
+            int duration
     ) {
         this.title = title;
         this.duration = duration;
-        this.totalReproductions = totalReproductions;
     }
 
     public String getTitle() {
@@ -38,5 +36,6 @@ public abstract class Audio {
 
     public void play() {
         System.out.println("Playing...");
+        this.totalReproductions ++;
     }
 }

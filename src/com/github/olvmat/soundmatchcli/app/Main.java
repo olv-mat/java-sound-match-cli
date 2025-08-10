@@ -1,5 +1,6 @@
 package com.github.olvmat.soundmatchcli.app;
 
+import com.github.olvmat.soundmatchcli.models.Music;
 import com.github.olvmat.soundmatchcli.utils.console.ConsoleUtils;
 
 public class Main {
@@ -18,6 +19,20 @@ public class Main {
             switch (option) {
                 case 1:
                     System.out.println("Musics");
+                    Music music = new Music(
+                            "Bad Liar",
+                            5,
+                            "Imagine Dragons"
+                    );
+                    music.like();
+                    ConsoleUtils.display(
+                            "Music: " + music.getTitle() + "\n" +
+                                    "Singer: " + music.getSinger() + "\n" +
+                                    "Duration: " + music.getDuration() + " Minutes" + "\n" +
+                                    "Reproductions: " + music.getTotalReproductions() + "\n" +
+                                    "Likes: " + music.getLikes() + "\n"
+                            );
+                    music.play();
                     break;
                 case 2:
                     System.out.println("Podcasts");

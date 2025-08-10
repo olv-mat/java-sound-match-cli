@@ -1,24 +1,24 @@
 package com.github.olvmat.soundmatchcli.models;
 
 public class Music extends Audio {
-    private final String album;
+    private final String singer;
 
     public Music(
             String title,
             int duration,
-            int totalReproductions,
-            String album
+            String singer
     ) {
-        super(title, duration, totalReproductions);
-        this.album = album;
+        super(title, duration);
+        this.singer = singer;
     }
 
-    public String getAlbum() {
-        return this.album;
+    public String getSinger() {
+        return this.singer;
     }
 
     @Override
     public void play() {
-        System.out.println("Playing Music" + this.getTitle() + "...");;
+        System.out.println("Playing Music " + this.getTitle() + "...");
+        this.totalReproductions ++;
     }
 }

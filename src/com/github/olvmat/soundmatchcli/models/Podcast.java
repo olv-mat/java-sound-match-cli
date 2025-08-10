@@ -6,10 +6,9 @@ public class Podcast extends Audio {
     public Podcast(
             String title,
             int duration,
-            int totalReproductions,
             int episode
     ) {
-        super(title, duration, totalReproductions);
+        super(title, duration);
         this.episode = episode;
     }
 
@@ -20,5 +19,6 @@ public class Podcast extends Audio {
     @Override
     public void play() {
         System.out.println("Playing Podcast " + this.getTitle() + "...");
+        this.totalReproductions ++;
     }
 }
