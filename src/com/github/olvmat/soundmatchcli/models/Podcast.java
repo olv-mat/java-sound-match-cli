@@ -24,13 +24,13 @@ public class Podcast extends Audio {
 
     public int getClassification() {
         int likes = this.likes;
-        if (likes <= 500) {
+        if (likes <= 25) {
             return 1;
-        } else if (likes <= 1000) {
+        } else if (likes <= 50) {
             return 2;
-        } else if (likes <= 1500) {
+        } else if (likes <= 75) {
             return 3;
-        } else if (likes <= 2000) {
+        } else if (likes <= 100) {
             return 4;
         } else {
             return 5;
