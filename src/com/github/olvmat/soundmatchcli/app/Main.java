@@ -31,7 +31,8 @@ public class Main {
                                     "Singer: " + music.getSinger() + "\n" +
                                     "Duration: " + music.getDuration() + " Minutes" + "\n" +
                                     "Reproductions: " + music.getTotalReproductions() + "\n" +
-                                    "Likes: " + music.getLikes() + "\n"
+                                    "Likes: " + music.getLikes() + "\n" +
+                                    "Classification: " + music.getClassification() + " Stars" + "\n"
                             );
                     music.play();
                     break;
@@ -48,7 +49,8 @@ public class Main {
                                     "Episode: " + podcast.getEpisode() + "\n" +
                                     "Duration: " + podcast.getDuration() + " Minutes" + "\n" +
                                     "Reproductions: " + podcast.getTotalReproductions() + "\n" +
-                                    "Likes: " + podcast.getLikes() + "\n"
+                                    "Likes: " + podcast.getLikes() + "\n" +
+                                    "Classification: " + podcast.getClassification() + " Stars" + "\n"
                             );
                     podcast.play();
                     break;

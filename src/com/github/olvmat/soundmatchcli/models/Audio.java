@@ -1,10 +1,12 @@
 package com.github.olvmat.soundmatchcli.models;
 
-public abstract class Audio {
+import com.github.olvmat.soundmatchcli.interfaces.Classifiable;
+
+public abstract class Audio implements Classifiable {
     private final String title;
     private final int duration;
     protected int totalReproductions;
-    private int likes;
+    protected int likes;
 
     public Audio(
             String title,
